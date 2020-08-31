@@ -1,0 +1,23 @@
+# default database properties
+database:
+  host: localhost
+  port: 5432
+  driver_class_name: org.postgresql.Driver
+  username: postgres
+  password: root
+
+# spring datasource properties
+spring:
+  datasource:
+    jdbcUrl: jdbc:postgresql://${database.host}:${database.port}/record_management?autoReconnectcreateDatabaseIfNotExist=true
+    username: ${database.username}
+    password: ${database.password}
+    driver-class-name: ${database.driver_class_name}
+  jpa:
+    show-sql: true
+    hibernate:
+      open-in-view: false
+      generate-ddl: true
+      ddl-auto: create-drop
+      temp:
+        use_jdbc_metadata_defaults: false
