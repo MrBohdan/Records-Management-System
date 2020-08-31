@@ -1,6 +1,7 @@
 package com.records.management.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -16,7 +17,7 @@ import java.time.LocalDateTime;
 public class Record {
 
     @Id
-    @Column(name = "usreou", unique = true, updatable = false, nullable = false)
+    @Column(name = "usreou", unique = true, updatable = false, length = 8, nullable = false)
     private Long usreou;
 
     @Column(name = "comment", nullable = false)
@@ -32,6 +33,7 @@ public class Record {
     private double par_value;
 
     @Column(name = "pay_date", nullable = false)
+    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
     private LocalDateTime pay_date;
 
     @Column(name = "status", nullable = false)
