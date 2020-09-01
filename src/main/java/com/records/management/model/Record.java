@@ -23,8 +23,8 @@ public class Record {
     @Column(name = "comment", nullable = false)
     private String comment;
 
-    @Column(name = "amount", nullable = false)
-    private long amount;
+    @Column(name = "shares_amount", nullable = false)
+    private long shares_amount;
 
     @Column(name = "total_par_value", nullable = false)
     private double total_par_value;
@@ -43,28 +43,36 @@ public class Record {
     }
 
     /**
+     * @param usreou        - Unified State Register of Enterprises and Organizations of Ukraine.
      * @param comment
-     * @param usreou          - Unified State Register of Enterprises and Organizations of Ukraine.
-     * @param amount          - amount of shares.
-     * @param total_par_value - total Par-Value ( amount * par_value).
-     * @param par_value       - price of single share.
-     * @param pay_date        - date when purchasing a stock.
-     * @param status          - status of the record.
+     * @param shares_amount - amount of shares.
+     * @param shares_amount - total Par-Value ( amount * par_value).
+     * @param par_value     - price of single share.
+     * @param pay_date      - date when purchasing a stock.
+     * @param status        - status of the record.
      */
-    public Record(@JsonProperty("comment") String comment,
-                  @JsonProperty("usreou") long usreou,
-                  @JsonProperty("amount") long amount,
-                  @JsonProperty("total_par_value") double total_par_value,
+    public Record(@JsonProperty("usreou") Long usreou,
+                  @JsonProperty("comment") String comment,
+                  @JsonProperty("shares_amount") long shares_amount,
+                  double total_par_value,
                   @JsonProperty("par_value") double par_value,
                   @JsonProperty("pay_date") LocalDateTime pay_date,
-                  @JsonProperty("status") String status) {
-        this.comment = comment;
+                  String status) {
         this.usreou = usreou;
-        this.amount = amount;
+        this.comment = comment;
+        this.shares_amount = shares_amount;
         this.total_par_value = total_par_value;
         this.par_value = par_value;
         this.pay_date = pay_date;
         this.status = status;
+    }
+
+    public Long getUsreou() {
+        return usreou;
+    }
+
+    public void setUsreou(Long usreou) {
+        this.usreou = usreou;
     }
 
     public String getComment() {
@@ -75,20 +83,12 @@ public class Record {
         this.comment = comment;
     }
 
-    public long getUsreou() {
-        return usreou;
+    public long getShares_amount() {
+        return shares_amount;
     }
 
-    public void setUsreou(long usreou) {
-        this.usreou = usreou;
-    }
-
-    public long getAmount() {
-        return amount;
-    }
-
-    public void setAmount(long amount) {
-        this.amount = amount;
+    public void setShares_amount(long shares_amount) {
+        this.shares_amount = shares_amount;
     }
 
     public double getTotal_par_value() {

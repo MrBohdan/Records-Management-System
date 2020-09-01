@@ -29,6 +29,8 @@ public class RecordController {
     @PostMapping("/add")
     private @ResponseBody
     Record insertRecord(@Validated @NonNull @RequestBody Record record) {
+        record.setTotal_par_value(recordRepository.countTotalParValueUtil(record.getShares_amount(), record.getPar_value()));
+        record.setStatus("active");
         return recordRepository.save(record);
     }
 
@@ -43,8 +45,11 @@ public class RecordController {
         return recordRepository.findRecordByUsreou(usreou);
     }
 
-   /* @DeleteMapping(value = "/delete/{usreou}")
-    public void removeRecordByUsreou(@PathVariable("usreou") Long usreou) {
-        recordRepository.deleteRecordByUsreou(usreou);
-    }*/
+    @DeleteMapping(value = "/delete/{usreou}")
+    public @ResponseBody
+    Record removeRecordByUsreou(@PathVariable("usreou") Long usreou) {
+        Record record = recordRepository.findRecordByUsreou(usreou).get();
+        record.setStatus("deleted");
+        return recordRepository.save(record);
+    }
 }
