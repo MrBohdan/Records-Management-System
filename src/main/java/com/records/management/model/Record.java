@@ -1,6 +1,8 @@
 package com.records.management.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateTimeDeserializer;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.Column;
@@ -34,6 +36,7 @@ public class Record {
 
     @Column(name = "pay_date", nullable = false)
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
+    @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     private LocalDateTime pay_date;
 
     @Column(name = "status", nullable = false)
@@ -54,10 +57,8 @@ public class Record {
     public Record(@JsonProperty("usreou") Long usreou,
                   @JsonProperty("comment") String comment,
                   @JsonProperty("shares_amount") long shares_amount,
-                  double total_par_value,
                   @JsonProperty("par_value") double par_value,
-                  @JsonProperty("pay_date") LocalDateTime pay_date,
-                  String status) {
+                  @JsonProperty("pay_date") LocalDateTime pay_date) {
         this.usreou = usreou;
         this.comment = comment;
         this.shares_amount = shares_amount;

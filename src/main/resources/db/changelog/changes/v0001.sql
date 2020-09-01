@@ -1,39 +1,40 @@
-create extension hstore;
+CREATE EXTENSION IF NOT EXISTS hstore;
 
-create table audit (
-    audit_id serial primary key,
-    table_name text not null,
-    user_name text not null,
-    action_timestamp timestamp not null default current_timestamp,
-    action text not null check (action in ('i','d','u')),
+CREATE TABLE IF NOT EXISTS audit (
+    audit_id serial NOT NULL,
+    table_name text NOT NULL,
+    user_name text NOT NULL,
+    action_timestamp timestamp NOT NULL default current_timestamp,
+    action text NOT NULL CHECK (action IN ('insert','delete','update')),
     old_values hstore,
     new_values hstore,
     updated_cols text[],
-    query text
+    query text,
+    PRIMARY KEY (audit_id)
 );
 
-create or replace function if_modified_func() returns trigger as $body$
-begin
-    if tg_op = 'UPDATE' then
-        insert into audit (table_name, user_name, action, old_values, new_values, updated_cols, query)
-        values (tg_table_name::text, current_user::text, 'u', hstore(old.*), hstore(new.*),
+CREATE OR REPLACE FUNCTION if_modified_func() RETURNS TRIGGER AS $body$
+BEGIN
+    IF tg_op = 'UPDATE' THEN
+        INSERT INTO audit (table_name, user_name, action, old_values, new_values, updated_cols, query)
+        VALUES (tg_table_name::text, current_user::text, 'update', hstore(old.*), hstore(new.*),
                akeys(hstore(new.*) - hstore(old.*)), current_query());
         return new;
-    elsif tg_op = 'DELETE' then
-        insert into audit (table_name, user_name, action, old_values, query)
-        values (tg_table_name::text, current_user::text, 'd', hstore(old.*), current_query());
+    ELSIF tg_op = 'DELETE' THEN
+        INSERT INTO audit (table_name, user_name, action, old_values, query)
+        VALUES (tg_table_name::text, current_user::text, 'delete', hstore(old.*), current_query());
         return old;
-    elsif tg_op = 'INSERT' then
-        insert into audit (table_name, user_name, action, new_values, query)
-        values (tg_table_name::text, current_user::text, 'i', hstore(new.*), current_query());
+    ELSIF tg_op = 'INSERT' THEN
+        INSERT INTO audit (table_name, user_name, action, new_values, query)
+        VALUES (tg_table_name::text, current_user::text, 'insert', hstore(new.*), current_query());
         return new;
-    end if;
-end;
+    END IF;
+END;
 $body$
 language plpgsql;
 
-create table "record" (
-   usreou bigint NOT NULL,
+CREATE TABLE IF NOT EXISTS "record" (
+    usreou bigint NOT NULL,
     shares_amount bigint NOT NULL,
     comment varchar(255) NOT NULL,
     par_value double precision NOT NULL,
@@ -43,4 +44,4 @@ create table "record" (
     PRIMARY KEY (usreou)
 );
 
-create trigger record_audit after insert or update or delete on record for each row execute procedure if_modified_func();
+CREATE TRIGGER record_audit AFTER INSERT OR UPDATE OR DELETE ON record FOR EACH ROW EXECUTE PROCEDURE if_modified_func();

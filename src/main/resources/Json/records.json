@@ -1,0 +1,142 @@
+[
+  {
+    "usreou": 12547895,
+    "comment": "FRESNILLO PLC",
+    "shares_amount": 50,
+    "par_value": 1320.00,
+    "pay_date": "2014-01-01T12:01:50"
+  },
+  {
+    "usreou": 36547895,
+    "comment": "ANGLO AMERICAN PLC",
+    "shares_amount": 81448,
+    "par_value": 1856.60,
+    "pay_date": "2018-06-29T17:26:17"
+  },
+  {
+    "usreou": 36547895,
+    "comment": "AUTO TRADER GROUP PLC",
+    "shares_amount": 97527,
+    "par_value": 568.00,
+    "pay_date": "2000-02-01T12:19:36"
+  },
+  {
+    "usreou": 65874169,
+    "comment": "ANGLO AMERICAN PLC",
+    "shares_amount": 1755,
+    "par_value": 1856.60,
+    "pay_date": "2013-08-16T16:23:44"
+  },
+  {
+    "usreou": 36547854,
+    "comment": "OCADO GROUP PLC",
+    "shares_amount": 1487,
+    "par_value": 2506.00,
+    "pay_date": "2020-06-30T02:11:11"
+  },
+  {
+    "usreou": 78546987,
+    "comment": "PHOENIX GROUP HOLDINGS PLC",
+    "shares_amount": 787,
+    "par_value": 691.00,
+    "pay_date": "2011-01-11T15:46:56"
+  },
+  {
+    "usreou": 25478961,
+    "comment": "RIO TINTO PLC ORD",
+    "shares_amount": 47824,
+    "par_value": 4655.00,
+    "pay_date": "2015-07-26T08:14:15"
+  },
+  {
+    "usreou": 35784168,
+    "comment": "SMURFIT KAPPA GROUP PLC",
+    "shares_amount": 957,
+    "par_value": 2688.00,
+    "pay_date": "2019-08-12T18:27:14"
+  },
+  {
+    "usreou": 36541895,
+    "comment": "HARGREAVES LANSDOWN PLC ORD",
+    "shares_amount": 157,
+    "par_value": 1598.50,
+    "pay_date": "2020-05-05T01:31:55"
+  },
+  {
+    "usreou": 69854735,
+    "comment": "MORRISON(WM.)SUPERMARKETS PLC",
+    "shares_amount": 972,
+    "par_value": 190.00,
+    "pay_date": "2019-12-15T20:40:50"
+  },
+  {
+    "usreou": 15478965,
+    "comment": "ROYAL DUTCH SHELL PLC 'B' ORD",
+    "shares_amount": 9544885,
+    "par_value": 1041.20,
+    "pay_date": "2020-09-21T21:15:15"
+  },
+  {
+    "usreou": 54795412,
+    "comment": "Netflix Inc",
+    "shares_amount": 6758,
+    "par_value": 555.76,
+    "pay_date": "2013-09-21T21:15:15"
+  },
+  {
+    "usreou": 58479624,
+    "comment": "Flutter Entertainment plc",
+    "shares_amount": 4678,
+    "par_value": 12055.00,
+    "pay_date": "2016-08-20T13:30:35"
+  },
+  {
+    "usreou": 78954821,
+    "comment": "AstraZeneca PLC",
+    "shares_amount": 145,
+    "par_value": 8197.00,
+    "pay_date": "2020-01-03T03:20:30"
+  },
+  {
+    "usreou": 36547895,
+    "comment": "Croda International Plc",
+    "shares_amount": 4637897278278,
+    "par_value": 5932.00,
+    "pay_date": "2018-10-12T13:05:01"
+  },
+  {
+    "usreou": 87456324,
+    "comment": "Experian plc",
+    "shares_amount": 64786,
+    "par_value": 2735.00,
+    "pay_date": "2020-02-26T15:15:15"
+  },
+  {
+    "usreou": 65478951,
+    "comment": "Admiral Group plc",
+    "shares_amount": 21,
+    "par_value": 2625.00,
+    "pay_date": "2019-04-30T16:28:31"
+  },
+  {
+    "usreou": 65478234,
+    "comment": "RIT Capital Partners plc",
+    "shares_amount": 3104,
+    "par_value": 1818.00,
+    "pay_date": "2018-10-08T17:01:15"
+  },
+  {
+    "usreou": 14587598,
+    "comment": "Polymetal International Plc",
+    "shares_amount": 1758,
+    "par_value": 2032.00,
+    "pay_date": "2018-09-30T12:39:41"
+  },
+  {
+    "usreou": 36987458,
+    "comment": "Hikma Pharmaceuticals PLC",
+    "shares_amount": 1758,
+    "par_value": 2328.00,
+    "pay_date": "2005-01-13T15:10:24"
+  }
+]

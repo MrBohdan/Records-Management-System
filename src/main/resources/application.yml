@@ -13,3 +13,8 @@ spring:
     username: ${database.username}
     password: ${database.password}
     driver-class-name: ${database.driver_class_name}
+  liquibase:
+    enabled: true
+  jpa:
+    show-sql: true
+

@@ -1,4 +1,4 @@
-package com.records.management.config.database;
+package com.records.management.config.databaseConfig;
 
 import org.apache.commons.dbcp2.BasicDataSource;
 import org.springframework.beans.factory.annotation.Autowired;

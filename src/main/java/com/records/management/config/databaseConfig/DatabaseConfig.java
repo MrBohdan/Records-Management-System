@@ -1,4 +1,4 @@
-package com.records.management.config.database;
+package com.records.management.config.databaseConfig;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;

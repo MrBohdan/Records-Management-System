@@ -9,6 +9,7 @@ import org.springframework.lang.NonNull;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Collection;
 import java.util.Optional;
 
 /**
@@ -32,6 +33,16 @@ public class RecordController {
         record.setTotal_par_value(recordRepository.countTotalParValueUtil(record.getShares_amount(), record.getPar_value()));
         record.setStatus("active");
         return recordRepository.save(record);
+    }
+
+    @PostMapping("/add/list")
+    @ResponseBody
+    public Collection<Record> insertListOfRecord(@Validated @NonNull @RequestBody Iterable<Record> record) {
+        for (Record r : record) {
+            r.setTotal_par_value(recordRepository.countTotalParValueUtil(r.getShares_amount(), r.getPar_value()));
+            r.setStatus("active");
+        }
+        return recordRepository.saveAll(record);
     }
 
     @GetMapping(value = "/get")
