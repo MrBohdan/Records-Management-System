@@ -12,6 +12,11 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
 
+/**
+ * Configuration to load json data from file to database.
+ *
+ * @author Bohdan Skrypnyk (bohdan.skrypnyk@yahoo.com)
+ */
 @Configuration
 public class LoadJsonFileConfig implements CommandLineRunner {
 

@@ -13,6 +13,8 @@ import java.util.Collection;
 import java.util.Optional;
 
 /**
+ * Controller to get web requests of the model {@link Record}.
+ *
  * @author Bohdan Skrypnyk (bohdan.skrypnyk@yahoo.com)
  */
 @RestController

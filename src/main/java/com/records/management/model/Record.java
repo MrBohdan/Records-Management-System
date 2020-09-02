@@ -46,13 +46,13 @@ public class Record {
     }
 
     /**
-     * @param usreou        - Unified State Register of Enterprises and Organizations of Ukraine.
+     * @param usreou          - Unified State Register of Enterprises and Organizations of Ukraine.
      * @param comment
-     * @param shares_amount - amount of shares.
-     * @param shares_amount - total Par-Value ( amount * par_value).
-     * @param par_value     - price of single share.
-     * @param pay_date      - date when purchasing a stock.
-     * @param status        - status of the record.
+     * @param shares_amount   - amount of shares.
+     * @param total_par_value - total Par-Value ( amount * par_value).
+     * @param par_value       - price of single share.
+     * @param pay_date        - date when purchasing a stock.
+     * @param status          - status of the record.
      */
     public Record(@JsonProperty("usreou") Long usreou,
                   @JsonProperty("comment") String comment,

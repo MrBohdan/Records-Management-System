@@ -138,5 +138,61 @@
     "shares_amount": 1758,
     "par_value": 2328.00,
     "pay_date": "2005-01-13T15:10:24"
+  },
+  {
+    "usreou": 58795487,
+    "comment": "Chewy, Inc.",
+    "shares_amount": 235,
+    "par_value": 69.43,
+    "pay_date": "2008-07-23T14:15:40"
+  },
+  {
+    "usreou": 25478965,
+    "comment": "Whiting Petroleum Corporation",
+    "shares_amount": 456,
+    "par_value": 0.5665,
+    "pay_date": "2020-08-27T17:14:24"
+  },
+  {
+    "usreou": 58746985,
+    "comment": "Patient Access Solutions, Inc.",
+    "shares_amount": 45780,
+    "par_value": 0.1099,
+    "pay_date": "2020-07-14T13:41:20"
+  },
+  {
+    "usreou": 45876215,
+    "comment": "Jounce Therapeutics, Inc.",
+    "shares_amount": 254834,
+    "par_value": 7.53,
+    "pay_date": "2020-03-08T18:00:00"
+  },
+  {
+    "usreou": 25479647,
+    "comment": "J.Jill, Inc.",
+    "shares_amount": 2145,
+    "par_value": 0.5400,
+    "pay_date": "2020-03-12T15:10:10"
+  },
+  {
+    "usreou": 15479658,
+    "comment": "Lululemon Athletica Inc.",
+    "shares_amount": 364,
+    "par_value": 391.16,
+    "pay_date": "2020-03-15T17:15:30"
+  },
+  {
+    "usreou": 32587469,
+    "comment": "Chipotle Mexican Grill, Inc.",
+    "shares_amount": 678,
+    "par_value": 1372.22,
+    "pay_date": "2020-06-20T14:30:45"
+  },
+  {
+    "usreou": 58964827,
+    "comment": "Okta, Inc.",
+    "shares_amount": 328,
+    "par_value": 224.50,
+    "pay_date": "2020-09-18T09:10:35"
   }
 ]

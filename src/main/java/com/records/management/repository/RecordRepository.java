@@ -10,6 +10,8 @@ import org.springframework.stereotype.Repository;
 import java.util.Optional;
 
 /**
+ * Repository of the model {@link Record}
+ *
  * @author Bohdan Skrypnyk (bohdan.skrypnyk@yahoo.com)
  */
 @Repository

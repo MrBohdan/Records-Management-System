@@ -9,6 +9,8 @@ import java.net.URISyntaxException;
 
 
 /**
+ * Configuration of the database source.
+ *
  * @author Bohdan Skrypnyk (bohdan.skrypnyk@yahoo.com)
  */
 @Configuration
