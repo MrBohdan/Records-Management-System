@@ -26,18 +26,18 @@ public class Record {
     private String comment;
 
     @Column(name = "shares_amount", nullable = false)
-    private long shares_amount;
+    private long sharesAmount;
 
     @Column(name = "total_par_value", nullable = false)
-    private double total_par_value;
+    private double totalParValue;
 
     @Column(name = "par_value", nullable = false)
-    private double par_value;
+    private double parValue;
 
     @Column(name = "pay_date", nullable = false)
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
-    private LocalDateTime pay_date;
+    private LocalDateTime payDate;
 
     @Column(name = "status", nullable = false)
     private String status;
@@ -46,26 +46,24 @@ public class Record {
     }
 
     /**
-     * @param usreou          - Unified State Register of Enterprises and Organizations of Ukraine.
-     * @param comment
-     * @param shares_amount   - amount of shares.
-     * @param total_par_value - total Par-Value ( amount * par_value).
-     * @param par_value       - price of single share.
-     * @param pay_date        - date when purchasing a stock.
-     * @param status          - status of the record.
+     * @param usreou        - Unified State Register of Enterprises and Organizations of Ukraine.
+     * @param comment       - comment
+     * @param sharesAmount  - amount of shares.
+     * @param totalParValue - total Par-Value (shares amount * Par-Value).
+     * @param parValue      - price of single share.
+     * @param payDate       - date when purchasing a stock.
+     * @param status        - status of the record.
      */
     public Record(@JsonProperty("usreou") Long usreou,
                   @JsonProperty("comment") String comment,
-                  @JsonProperty("shares_amount") long shares_amount,
-                  @JsonProperty("par_value") double par_value,
-                  @JsonProperty("pay_date") LocalDateTime pay_date) {
+                  @JsonProperty("sharesAmount") long sharesAmount,
+                  @JsonProperty("parValue") double parValue,
+                  @JsonProperty("payDate") LocalDateTime payDate) {
         this.usreou = usreou;
         this.comment = comment;
-        this.shares_amount = shares_amount;
-        this.total_par_value = total_par_value;
-        this.par_value = par_value;
-        this.pay_date = pay_date;
-        this.status = status;
+        this.sharesAmount = sharesAmount;
+        this.parValue = parValue;
+        this.payDate = payDate;
     }
 
     public Long getUsreou() {
@@ -84,36 +82,36 @@ public class Record {
         this.comment = comment;
     }
 
-    public long getShares_amount() {
-        return shares_amount;
+    public long getSharesAmount() {
+        return sharesAmount;
     }
 
-    public void setShares_amount(long shares_amount) {
-        this.shares_amount = shares_amount;
+    public void setSharesAmount(long sharesAmount) {
+        this.sharesAmount = sharesAmount;
     }
 
-    public double getTotal_par_value() {
-        return total_par_value;
+    public double getTotalParValue() {
+        return totalParValue;
     }
 
-    public void setTotal_par_value(double total_par_value) {
-        this.total_par_value = total_par_value;
+    public void setTotalParValue(double totalParValue) {
+        this.totalParValue = totalParValue;
     }
 
-    public double getPar_value() {
-        return par_value;
+    public double getParValue() {
+        return parValue;
     }
 
-    public void setPar_value(double par_value) {
-        this.par_value = par_value;
+    public void setParValue(double parValue) {
+        this.parValue = parValue;
     }
 
-    public LocalDateTime getPay_date() {
-        return pay_date;
+    public LocalDateTime getPayDate() {
+        return payDate;
     }
 
-    public void setPay_date(LocalDateTime pay_date) {
-        this.pay_date = pay_date;
+    public void setPayDate(LocalDateTime payDate) {
+        this.payDate = payDate;
     }
 
     public String getStatus() {
