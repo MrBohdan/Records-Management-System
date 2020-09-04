@@ -16,7 +16,7 @@
 
 <h4>Diagrams (Refresh page if images is not loading)</h4>
 
-![UML](https://drive.google.com/uc?export=view&id=1PjQwUZYwbIpdrVHo0RKbYOWj-Qcf2Kj3)
+![UML](https://drive.google.com/uc?export=view&id=1392v-bSEZfsVrPEyzE8iVk3nAW1YqVID)
 <p align="center"><b>`"UML Diagram"`</b></p>
 
 ![Flowchart](https://drive.google.com/uc?export=view&id=1p98MmIqvDqSufCrjBUPVxTljdWb4mAey)
