@@ -14,7 +14,7 @@
  1) Before running the system need to change the database connection properties in the `application.yml`.</br>
  2) Check request URLs with JSON methods and input body data on this [API Collection requests!](https://documenter.getpostman.com/view/2846959/TVCgxS8t)
 
-<h4>Diagrams</h4>
+<h4>Diagrams (Refresh page if images is not loading)</h4>
 
 ![UML](https://drive.google.com/uc?export=view&id=1PjQwUZYwbIpdrVHo0RKbYOWj-Qcf2Kj3)
 <p align="center"><b>`"UML Diagram"`</b></p>
