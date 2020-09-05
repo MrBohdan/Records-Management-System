@@ -17,7 +17,7 @@
 <h4>Diagrams (Refresh page if images is not loading)</h4>
 
 ![Entity Relationship Diagram](https://drive.google.com/uc?export=view&id=1392v-bSEZfsVrPEyzE8iVk3nAW1YqVID)
-<p align="center"><b>`"Entity Relationship Diagram"`</b></p>
+<p align="center"><b>"Entity Relationship Diagram"</b></p>
 
 ![Flowchart](https://drive.google.com/uc?export=view&id=1p98MmIqvDqSufCrjBUPVxTljdWb4mAey)
-<p align="center"><b>`"Flowchart"`</b></p>
+<p align="center"><b>"Flowchart"</b></p>
